@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+    <script src="regex.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header class="menu-principal">
+        <div name="menu-principal">
+            <h2 class="icon-menu-principal">ClientSever</h2>
+        </div>
+    </header>
+    <section class="margin-base">
+        <div class="mt2">
+            <h2>Formulario de cadastro</h2>
+        </div>
+        <hr>
+        <form class="mt1">
+            <h2>Dados Pessoais:</h2>
+            <div id="alertas" class="none alerta-danger" >
+                <p id="alertaPreenchimento" class="none alerta-icon">Verificar os campos em vermelho (Preencha todos os dados)</p>
+            </div>
+            <div class="mt1">
+                <label id="nomeLabel" for="nomeInput" class="font-base ">Nome:</label><br>
+                <input id="nomeInput" class="input-padrao hoverInput-padrao" type="text" placeholder="Digite o nome do usuário">
+            </div>
+            <div class="mt1">
+                <label id="cpfLabel" for="cpfInput" class="font-base">CPF:</label><br>
+                <input id="cpfInput" class="input-padrao hoverInput-padrao " type="text" placeholder="Digite o CPF do usuário" maxlength="14">
+            </div>
+            <div class="mt1">
+                <label id="idadeLabel" for="idadeInput" class="font-base">Data de nascimento:</label><br>
+                <input id="idadeInput" class="input-padrao hoverInput-padrao " type="date">
+            </div>
+            <div class="mt1">
+                <label id="emailLabel"  class="font-base">E-Mail:</label><br>
+                <input id="emailInput" class="input-padrao hoverInput-padrao " type="email" placeholder="Digite o e-mail do usuário">
+            </div>
+        </form>
+        <hr class="mt3">
+        <form class="mt2" >
+            <h2>Dados para login</h2>
+            <div class="mt1">
+                <label id="usernameLabel" for="usernameInput" class="font-base">Username:</label><br>
+                <input id="usernameInput" class="input-padrao hoverInput-padrao" type="text" placeholder="Digite o Username que sera usado para logar">
+            </div>
+            <div class="mt1">
+                <label id="senhaLabel" for="senhaInput" class="font-base">Digite uma senha:</label><br>
+                <input id="senhaInput" class="input-padrao hoverInput-padrao" type="password" placeholder="Digite uma senha sera usada para logar">
+            </div>
+            <div class="mt1">
+                <label id="senhaConfirmaLabel" for="confirmaSenhaInput" class="font-base">Confirme a senha:</label><br>
+                <input id="confirmaSenhaInput" class="input-padrao hoverInput-padrao" type="password" placeholder="Confirme a senha">
+            </div>
+        </form>
+        <div class="mt2" style="margin-bottom: 100px;">
+            <button onclick="salvarDados()"  class="btn-success hoverBtn-success">Salvar</button>
+            <button onclick="limparDados()"  class="btn-limpar hoverBtn-limpar">Limpar</button>
+        </div>
+    </section>
+</body>
+
+</html>
